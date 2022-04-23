@@ -13,3 +13,7 @@ deploy:
 # terraform destroy
 end:    
 	bash -c "cd $(path_terraform) && make destroy"
+
+# Creamos el cluster de kubernetes en AWS
+status:    
+	bash -c "cd $(path_terraform) && make apply"
