@@ -6,14 +6,15 @@ provider "kubernetes" {
   config_path = "./../kubeconfig.yaml"
 }
 
- provider "helm" {
+provider "helm" {
   kubernetes {
-    config_path = "~/.kube/config"
+    config_path = "./../kubeconfig.yaml"
   }
 }
 
- provider "kubectl" {
+provider "kubectl" {
   kubernetes {
-    config_path = "~/.kube/config"
+    config_path = "./../kubeconfig.yaml"
   }
 }
+

@@ -9,3 +9,7 @@ variable "environment" {
 variable "namespace" {
   default = "testing"
 }
+
+variable "mongo-namespace" {
+  default = "mongo"
+}

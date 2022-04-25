@@ -360,3 +360,9 @@ resource "kubernetes_service" "cenit-cluster-ip-service" {
   }
 }
 
+
+
+# obtener las variables de entorno
+#falta servicio para la conexion de frontend con backend
+#falta el acceso a las imagenes docker
+#falta hacer el ingress con el nombre del dominio
