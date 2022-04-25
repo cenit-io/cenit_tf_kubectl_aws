@@ -41,11 +41,11 @@ resource "kubernetes_deployment" "cenit-deployment-backend" {
           name = "regcred"
         }
         container {
-          #image = "cenitgroup/cenitio:latest"
-          image = "wordpress:php7.1-apache"
-          name  = "cenit-backend"
+          image = "cenitgroup/cenitio:latest"
+          #image = "wordpress:php7.1-apache"
+          name = "cenit-backend"
 
-          image_pull_policy="Always"
+          image_pull_policy = "Always"
 
           /* resources {
             limits = {
@@ -159,7 +159,7 @@ resource "kubernetes_deployment" "cenit-deployment-backend" {
             name  = "HOST"
             value = ""
           }
-         /*  env {
+          /*  env {
             name  = "RABBITMQ_BIGWIG_TX_URL"
             value = "amqp://<USER>:<PASSWORD>@rabbitmq-cluster-ip-service/<VHOST>"
           } */
@@ -213,11 +213,11 @@ resource "kubernetes_deployment" "cenit-deployment-frontend" {
           name = "regcred"
         }
         container {
-          #image = "cenitgroup/cenitio:frontend"
-          image = "wordpress:php7.1-apache"
-          name  = "cenit-frontend"
+          image = "cenitgroup/cenitio:frontend"
+          #image = "wordpress:php7.1-apache"
+          name = "cenit-frontend"
 
-          image_pull_policy="Always"
+          image_pull_policy = "Always"
 
           /* resources {
             limits = {
@@ -343,7 +343,7 @@ resource "kubernetes_deployment" "cenit-deployment-frontend" {
 
 resource "kubernetes_service" "cenit-cluster-ip-service" {
   metadata {
-    name = "cenit-cluster-ip-service"
+    name      = "cenit-cluster-ip-service"
     namespace = kubernetes_namespace.cenit.id
   }
   spec {
