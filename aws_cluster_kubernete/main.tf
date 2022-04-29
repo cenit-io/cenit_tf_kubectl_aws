@@ -2,7 +2,7 @@ module "eks" {
   source = "terraform-aws-modules/eks/aws"
 
   cluster_name                    = local.cluster_name
-  cluster_version                 = "1.22"
+  cluster_version                 = var.version_cluster
   cluster_endpoint_private_access = true
   cluster_endpoint_public_access  = true
 
@@ -196,10 +196,10 @@ resource "null_resource" "kubernetes_config" {
 resource "null_resource" "delete_kubernetes_config" {
 
   provisioner "local-exec" {
-    when = "destroy"
+    when    = "destroy"
     command = "rm ./../kubeconfig.yaml"
   }
-  
-  
+
+
 }
- 
+
