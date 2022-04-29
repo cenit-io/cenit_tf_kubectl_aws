@@ -1,5 +1,9 @@
 ## Infraestructura del proyecto Cenit
 # AWS
-# Cluster Kubernete
+se depende de un cluster kubernete v1.19 en AWS
+
 # Terraform
-# Makefile
+se clona el proyecto de kubernete en una dirección predefinida
+
+# Makefileç
+se hace todo el deploy mediante make

@@ -2,14 +2,11 @@ variable "region" {
   default = "eu-central-1"
 }
 
-variable "environment" {
-  default = "testing"
+variable "path_kubernete" {
+  default = "./../cenit"
 }
 
-variable "namespace" {
-  default = "testing"
-}
 
-variable "mongo-namespace" {
-  default = "mongo"
+variable "path_kubectl" {
+  default = "./../kubeconfig.yaml"
 }

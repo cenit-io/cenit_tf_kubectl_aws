@@ -1,20 +1,20 @@
 provider "aws" {
-  region = "eu-central-1"
+  region = var.region
 }
 
 provider "kubernetes" {
-  config_path = "./../kubeconfig.yaml"
+  config_path = var.path_kubectl
 }
 
 provider "helm" {
   kubernetes {
-    config_path = "./../kubeconfig.yaml"
+    config_path = var.path_kubectl
   }
 }
 
 provider "kubectl" {
   kubernetes {
-    config_path = "./../kubeconfig.yaml"
+    config_path = var.path_kubectl
   }
 }
 
