@@ -5,7 +5,7 @@ Congifuración AWS
     - export AWS_SECRET_ACCESS_KEY=
     - export AWS_DEFAULT_REGION=
 
-
+- source .env
 ---
 # AWS
 El deploy de kubernete depende de la version v1.19, en AWS
